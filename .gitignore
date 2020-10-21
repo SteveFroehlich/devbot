@@ -1,5 +1,8 @@
+# folders
 .idea/
-*.log
+images/
 
+# files
+*.log
 run_devbot.sh
 
