@@ -10,9 +10,7 @@ plugins.
  3. Based on user created voice command to bash alias [csv file](cmd_alias_map.csv)
  , run commands
  4. Speak "[Wakeword] list commands" to see all the supported commands
- 5. Speak "[Wakeword] play classical music" to play the youtube audio
-   in the youtube video [here](actions/youtube_playlists/classical.txt)
-   the current video is a collection of classical music.
+ 5. Speak "[Wakeword] play classical music" to play a collection of classical music.
  
 Feature #3's [csv file](cmd_alias_map.csv) currently expects two bash alias to be
 defined in your .bashrc or .bash_profile to work properly:
@@ -41,7 +39,7 @@ Thank you. I heard: list commands
 ```
 Devbot will print out "Thank you. I heard: some command" to let you know what
 its trying to do. The commands are listed below. Not that play is the base command
-to play audio from youtube videos. For example "Alfred play classical music" is
+to play audio. For example "Alfred play classical music" is
 the only supported play action currently.
 
 ### Installation
@@ -49,12 +47,16 @@ You can install via pip:
 ```
 pip install -r requirements.txt
 ```
-or you can use pipenv. Note port audio needs to be installed as well
+or you can use pipenv. 
+```
+pipenv sync
+```
+Note port audio needs to be installed as well
 if you are on a mac you can use Homebrew:
 ```
 brew install portaudio
 ```
-To run the youtube and music commands you will need FFmpeg. Homebrew
+To run the music commands you will need FFmpeg. Homebrew
 should be able to help there as well
 ```
 brew install ffmpeg
@@ -77,26 +79,7 @@ giving commands in that case.
  * [port audio](http://www.portaudio.com/)
  * [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) 
     * [SpeechRecognition github](https://github.com/Uberi/speech_recognition)
-
-To support playing audio from youtube:
- * [youtube-dl](https://pypi.org/project/youtube_dl/)
- * [FFmpeg](https://ffmpeg.org/)
-    
-   
-
-## Notes on Music with youtube-dl
-Resources:
- * [hello world example](https://github.com/ytdl-org/youtube-dl/)
- * [full available options](https://github.com/ytdl-org/youtube-dl/blob/3e4cedf9e8cd3157df2457df7274d0c842421945/youtube_dl/YoutubeDL.py#L137-L312)
-
-
- * add support for watching/listening to youtube
-    * `pipenv install youtube-dl`
-    * [so post](https://unix.stackexchange.com/questions/160212/watch-youtube-videos-in-terminal)
-    * [github](https://github.com/ytdl-org/youtube-dl/)
-    * [youtube-dl site](http://ytdl-org.github.io/youtube-dl/about.html)
-    * key [SO post](https://stackoverflow.com/questions/50876292/opencv-capture-online-video-for-further-processing-without-downloading-the-file/50881927#50881927)
-
+       
 
  ## Resources
  * [toward data science](https://towardsdatascience.com/easy-speech-to-text-with-python-3df0d973b426)
@@ -108,4 +91,10 @@ Resources:
 
 
 ### Alternatives
-[mycroft](https://mycroft.ai/) might be worth looking into.
+* [mycroft](https://mycroft.ai/) open source Alexa
+* [Alfred App for mac](https://www.alfredapp.com/) similar voice commands
+    no bash alias support
+* [non audio jarvis](https://github.com/sukeesh/Jarvis)
+* jarvis [code](https://github.com/GauravSingh9356/J.A.R.V.I.S),
+plus jarvis [blog post](https://devophub.blogspot.com/2020/10/jarvis-v20-is-released-come-and.htmlg)
+* [one file jarvis](https://github.com/ValentinGenard/Jarvis-artificial-intelligence)
