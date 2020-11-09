@@ -1,7 +1,11 @@
 # Devbot
 A hacked together app that converts audio to bash alias and runs the corresponding 
 command. Devbot also has the ability to run bash and python scripts via python 
-plugins.
+plugins. 
+
+## Motivation
+You can read the reason for why this exists 
+[in this blog post](https://medium.com/@froehlich/alexa-for-developers-in-150-lines-of-python-bf93dc93e80d)
 
 
 ## Features
